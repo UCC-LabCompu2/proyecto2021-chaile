@@ -1,0 +1,17 @@
+#TituloPrincipal{
+    color: chartreuse;
+    text-align: center;
+    position: relative;
+    border: 2px dashed #1f1bff;
+    margin: 400px 400px 0;
+    padding: 5px,10px;
+    border-radius: 19px;
+}
+nav{
+    color: chartreuse;
+    text-align: center;
+}
+body {
+    background-color: darkcyan;
+    background: url("imagenes/fondo-pp.jpg") no-repeat fixed center;
+}
