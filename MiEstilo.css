@@ -9,14 +9,18 @@
 }
 nav button{
     background-color: rgba(112, 121, 32, 0.51);
-    text-align: center;
-    position: absolute;
-    font-size: 3em;
-    border: 2px solid olive;
+    font-size: 2em;
+    margin: 4px 100px 0;
+    border: 1.5px solid #f6f6f6;
+    padding: 5px 25px;
 }
 body {
     background-color: #005f01;
-    /*background: url("imagenes/fondo-pp.jpg") no-repeat fixed center;*/
+    background: url("imagenes/fondo-pp.jpg") no-repeat fixed center;
+}
+#creador{
+    float: right;
+    right: 0;
 }
 /*empezar*/
 .menu{
