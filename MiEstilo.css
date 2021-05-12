@@ -1,7 +1,72 @@
 /*index*/
 body{
-    background-color: #19ac67;
-    background: url("imagenes/fondo-pp.jpg") no-repeat cover fixed;
+    text-align: center;
+    background: #195f26 url("imagenes/fondo-pp.jpg") no-repeat fixed;
+    background-size:cover;
+    font-family: 'Play', sans-serif;
 }
-
+#icono{
+    float: left;
+}
+/*index*/
+.TituloPrincipal{
+    text-align: center;
+    font-size: 3.5em;
+    color: #2fff00;
+    margin-top: 100px;
+}
+#boton{
+    text-align: center;
+    margin-top: 150px;
+}
+#boton button{
+    font-size: 3.5em;
+    color: brown;
+    border: black 5px double;
+}
+footer{
+    margin-top: 70px;
+    background-color: #999999;
+}
+/*menu*/
+div.menu {
+    background-color: rgba(146, 255, 118, 0.18);
+    margin: 250px 200px 1px;
+    border-radius: 15px;
+    padding: 10px 5px;
+}
+#empezar{
+    margin: 5px 10px;
+    font-size: 1.5em;
+}
+#tutorial{
+    margin: 5px 10px;
+    font-size: 1.5em;
+}
+#puntajes{
+    margin: 5px 10px;
+    font-size: 1.5em;
+}
+/*empezar*/
+.em_punta{
+    float: right;
+}
+#canvas{
+    text-align: center;
+}
+/*Tutorial*/
+#pagtutorial{
+    float: right;
+}
+#texto{
+    color: white ;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 200px 50px 1px;
+}
+/*Tabla de Puntaje*/
+.tablapuntaje{
+    color: #19ac67;
+    border: 2px double;
+}
 

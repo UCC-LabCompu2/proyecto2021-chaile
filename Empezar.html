@@ -6,14 +6,28 @@
     <meta content="Lucia Chaile" name="author">
     <meta content="Juego de billar" name="Descripcion">
     <meta content="juego, entretenimiento, pool" name="palabras-principales">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="MiEstilo.css" type="text/css">
+    <link rel="shortcut icon" href="imagenes/fav.png">
+
 </head>
 <body>
+<div>
+    <a href="menu.html" <img id="icono" src="imagenes/logovolver.png">
+</div>
+<div class="em_punta">
     <div>
-        <h3>puntaje</h3>
+        <h3><input disabled type="" name="points" min="0" placeholder="Puntaje"></h3>
     </div>
     <div>
-        <h3>mejor puntaje </h3>
+        <h3><input disabled type="number" name="points" min="0" placeholder="Puntaje"> </h3>
     </div>
+    <div id="canvas">
+    <canvas id="myCanvas">
+        El navegador no soporta canvas
+    </canvas>
+    </div>
+</div>
 </body>
 </html>
