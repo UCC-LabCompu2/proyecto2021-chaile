@@ -1,36 +1,7 @@
-#TituloPrincipal{
-    color: chartreuse;
-    text-align: center;
-    border: 2px solid;
-    margin: auto;
-    margin-top: 400px;
-    width: 20%;
-    padding: 5px 15px;
+/*index*/
+body{
+    background-color: #19ac67;
+    background: url("imagenes/fondo-pp.jpg") no-repeat cover fixed;
 }
-nav button{
-    background-color: rgba(112, 121, 32, 0.51);
-    font-size: 2em;
-    margin: 4px 100px 0;
-    border: 1.5px solid #f6f6f6;
-    padding: 5px 25px;
-}
-body {
-    background-color: #005f01;
-    background: url("imagenes/fondo-pp.jpg") no-repeat fixed center;
-}
-#creador{
-    float: right;
-    right: 0;
-}
-/*empezar*/
-.menu{
-    text-align: center;
-    color: aliceblue;
-    background-color: rgba(89, 137, 70, 0.44);
-    margin: auto;
-    margin-top: 150px;
-    width: 30%;
-    padding: 30px 20px;
-    border-radius: 15px;
-    font-size: 2em;
-}
+
+
