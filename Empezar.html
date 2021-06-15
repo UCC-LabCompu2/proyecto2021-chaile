@@ -13,17 +13,21 @@
 
 </head>
 <body>
-<div>
-    <a href="menu.html" <img id="icono" src="imagenes/logovolver.png">
+<div class="caja">
+<div >
+    <a href="menu.html"> <img id="volver" src="imagenes/logovolver.png"> </a>
 </div>
-<div class="em_punta">
-        <h3><input disabled type="text" name="points" min="0" placeholder="Puntaje"></h3>
-        <h3><input disabled type="number" name="points" min="0" placeholder="Puntaje"> </h3>
-    <div id="canvas">
-    <canvas id="myCanvas">
+    <div id="visPun">
+        <div>
+            <input disabled type="number" name="points" min="0" placeholder="Puntaje">
+        </div>
+        <div>
+            <input disabled type="number" name="points" min="0" placeholder="Puntaje">
+        </div>
+    </div>
+    <canvas id="myCanvas" width="1000px" height="490px">
         El navegador no soporta canvas
     </canvas>
-    </div>
 </div>
 </body>
 </html>

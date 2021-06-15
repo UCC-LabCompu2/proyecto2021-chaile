@@ -5,9 +5,14 @@ body{
     background-size:cover;
     font-family: 'Play', sans-serif;
 }
-#icono{
-    float:left;
+/*boton para volver*/
+#volver{
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+    padding: 10px 30px;;
 }
+
 /*index*/
 .TituloPrincipal{
     text-align: center;
@@ -15,6 +20,11 @@ body{
     color: #2fff00;
     margin-top: 100px;
 }
+footer{
+    margin-top: 70px;
+    background-color: #999999;
+}
+/*botones*/
 #boton{
     text-align: center;
     margin-top: 150px;
@@ -24,10 +34,10 @@ body{
     color: brown;
     border: black 5px double;
 }
-footer{
-    margin-top: 70px;
-    background-color: #999999;
+a:hover{
+    font-size: 1.5em;
 }
+
 /*menu*/
 div.menu {
     background-color: rgba(146, 255, 118, 0.18);
@@ -47,26 +57,28 @@ div.menu {
     margin: 5px 10px;
     font-size: 1.5em;
 }
-/*empezar*/
-.em_punta{
+/*puntajes*/
+#visPun{
     float: right;
+    padding: 5px 70px;
+    font-size: 3em;
 }
-#canvas{
-    text-align: center;
-}
-/*Tutorial*/
-#pagtutorial{
-    float: right;
-}
-#texto{
-    color: white ;
-    font-size: 1.5em;
-    text-align: left;
-    margin: 200px 50px 1px;
-}
-/*Tabla de Puntaje*/
 .tablapuntaje{
     color: #19ac67;
     border: 2px double;
 }
+/*tutorial*/
+#guia{
+    border: 2px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+/*Tabla de Puntaje*/
 
+canvas{
+    border:1px solid #000000;
+    background: rgba(201, 252, 128, 0.47);
+}
