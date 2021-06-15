@@ -6,11 +6,10 @@ body{
     font-family: 'Play', sans-serif;
 }
 /*boton para volver*/
-#volver{
-    width: 50px;
+div .volver {
+    width: 60px;
     float: left;
     border-radius: 50%;
-    padding: 10px 30px;;
 }
 
 /*index*/
@@ -56,16 +55,21 @@ div.menu {
 #puntajes{
     margin: 5px 10px;
     font-size: 1.5em;
+
 }
 /*puntajes*/
 #visPun{
     float: right;
-    padding: 5px 70px;
-    font-size: 3em;
+    padding-top: 5px;
+    padding-right: 70px;
+    font-size: 1.5em;
 }
 .tablapuntaje{
+    text-align: center;
+}
+table, tr, td, th{
     color: #19ac67;
-    border: 2px double;
+    border: 1px solid #006a3e;
 }
 /*tutorial*/
 #guia{
@@ -79,6 +83,7 @@ div.menu {
 /*Tabla de Puntaje*/
 
 canvas{
+    margin-top: 85px;
     border:1px solid #000000;
     background: rgba(201, 252, 128, 0.47);
 }
