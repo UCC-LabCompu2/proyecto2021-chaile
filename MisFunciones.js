@@ -34,18 +34,21 @@ function Dibujarpelota(){
 
     var x=canvas.width;
     var y= canvas.height;
+    var dx=2;
+    var dy=-2;
 
     var pelotas = {
          radio: 20,
         dibujarpe: function (){
             ctx.beginPath();
-            ctx.arc(x/4, y/2 , this.radio, 0,2*Math.PI);
+            ctx.arc(x-250, y/2 , this.radio, 0,2*Math.PI);
             ctx.fillStyle = "#000000";
             ctx.fill ();
             ctx.closePath();
 
         }
     };
+
 
     var palo= {
         ancho: 200,
@@ -57,13 +60,59 @@ function Dibujarpelota(){
             ctx.fillRect(this.posx, 480/2, this.ancho, this.alto);
             ctx.fillStyle = "#0095DD";
             ctx.fill();
-            ctx.closePath()
+            ctx.closePath();
         }
 
     };
+
+    function deteccolision (){
+        if(x>palo.x && x<palo.x+palo.alto) {
+            //rebortarizquierda y derecha
+            if(x+dx<pelotas.radio  || x+dx>canvas.width-pelotas.radio){
+                dx=-dx;
+            }
+
+            //rebotar arriba y abajo
+            if(y+dy<pelotas.radio){
+                dy=-dy;
+            }
+            x+=dx;
+            y+=dy;
+        }
+
+    }
+
+
+    var derPresionado= false;
+    var izqPresionado= false;
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+
+    function mouseMoveHandler(e) {
+        var relativax =e.clientX - canvas.offsetLeft;
+        if(relativax>0 && relativax<canvas.width){
+            palo.posx =  relativax - palo.ancho/2;
+
+        }
+    }
     function dibujar(){
+        canvas.width = canvas.width;
+
+
+        //mover derecha o izquierda
+        if(derPresionado && palo.posx<canvas.width-palo.ancho){
+            palo.posx+=7;
+
+        }else if(izqPresionado && palo.posx>0){
+            palo.posX-=7;
+        }
+
         palo.dibujarpa();
         pelotas.dibujarpe();
+        deteccolision ()
+
+
+
     }
+
     setInterval(dibujar,10);
 }
