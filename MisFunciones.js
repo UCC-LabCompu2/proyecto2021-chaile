@@ -47,30 +47,23 @@ function Dibujarpelota(){
         }
     };
 
-    var palo = {
+    var palo= {
         ancho: 200,
         alto: 10,
-        posx: (canvas.width)/2,
+        posx: (canvas.width-200),
         margen: 5,
         dibujarpa: function (){
             ctx.beginPath();
-            ctx.fillRect(0 + this.margen, 480/2, this.ancho, this.alto);
-            ctx.fillStyle = "#0095DD"
+            ctx.fillRect(this.posx, 480/2, this.ancho, this.alto);
+            ctx.fillStyle = "#0095DD";
             ctx.fill();
             ctx.closePath()
         }
 
     };
-
-    document.addEventListener("mousemove", mouseMoveHandler, false);
-
-    function mouseMoveHandler(e) {
-        var relativax =e.clientX - canvas.offsetLeft;
-        if(relativax>0 && relativax<canvas.width){
-            palo.posx =  relativax - palo.ancho/2;
-
-        }
+    function dibujar(){
+        palo.dibujarpa();
+        pelotas.dibujarpe();
     }
-    pelotas.dibujarpe();
-    palo.dibujarpa();
+    setInterval(dibujar,10);
 }
