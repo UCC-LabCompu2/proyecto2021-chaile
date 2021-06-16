@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="MiEstilo.css" type="text/css">
     <link rel="shortcut icon" href="imagenes/fav.png">
+    <script type="text/javascript" src="MisFunciones.js"></script>
 </head>
-<body>
+<body onload="resultado()">
 <div>
     <a href="menu.html"> <img class="volver" src="imagenes/logovolver.png" alt="vinculo para volver al menu"> </a>
 </div >
@@ -22,13 +23,14 @@
     <th> PUNTAJE </th>
     </thead>
 
-    <tbody>
+    <div id="tabla">
+    <tbody >
     <tr>
         <td>
-            <input disabled name="nombre" placeholder="NOMBRE">
+            <input disabled type="text" name="nombre" id="nombre1">
         </td>
         <td>
-            <input disabled type="number" name="points" min="0">
+            <input disabled type="number" name="points" min="0" id="puntaje1">
         </td>
     </tr>
     <tr>
@@ -40,6 +42,7 @@
         </td>
     </tr>
     </tbody>
+    </div>
 </table>
 </div>
 </body>

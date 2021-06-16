@@ -10,11 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="MiEstilo.css" type="text/css">
     <link rel="shortcut icon" href="imagenes/fav.png">
+    <script type="text/javascript" src="MisFunciones.js"></script>
 </head>
 <body>
 <div class="jue.term">
-    <label for="nombre"> Ingrese nombre: </label> <input type="text" name="nombre" placeholder="NOMBRE" id="nombre">
-    <label for="puntajes">Puntaje: </label> <input disabled type="number" placeholder="NUMERO" id="puntajes">
+    <div>
+    <label for="nombre"> Ingrese nombre: </label> <input type="text" name="nombre" placeholder="NOMBRE" id="Nombre">
+    </div>
+
+    <div>
+    <label for="puntajes">Puntaje: </label> <input disabled type="number" placeholder="NUMERO" id="Puntajes">
+    </div>
+
+    <button onclick="datos()">
+        Enviar
+    </button>
 </div>
 
 </body>
