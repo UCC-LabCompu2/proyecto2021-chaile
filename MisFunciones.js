@@ -28,10 +28,28 @@ function resultado(){
  * @return
  */
 
-function Dibujarpelota(){
+var bandera;
+var banderacontinuar=false;
+function Dibujarpelota(event){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext ("2d");
-
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX,posY);
+    canvas.onmousedown = function () {bandera =true};
+    canvas.onmouseup = function () {bandera = false};
+    if (bandera && banderacontinuar == false){
+        palo.posinicialx=event.clientX;
+        palo.posinicialy=event.clientY;
+        banderacontinuar=true;
+    }
+    else if(bandera && banderacontinuar == true){
+        palo.posfinalx=event.clientX;
+        palo.posfinaly=event.clientY;
+    }
+    else if (!bandera){
+        banderacontinuar=false;
+    }
     var x=canvas.width;
     var y= canvas.height;
     var dx=2;
@@ -49,24 +67,29 @@ function Dibujarpelota(){
         }
     };
 
-
     var palo= {
         ancho: 200,
         alto: 10,
         posx: (canvas.width-200),
         margen: 5,
+        posinicialx:0,
+        posinicialy:0,
+        posfinalx:20,
+        posfinaly:20,
         dibujarpa: function (){
             ctx.beginPath();
-            ctx.fillRect(this.posx, 480/2, this.ancho, this.alto);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "#63007f";
+            ctx.moveTo(this.posinicialx,this.posinicialy);
+            ctx.lineTo(this.posfinalx, this.posfinaly);
+            ctx.stroke();
             ctx.closePath();
         }
 
     };
 
     function deteccolision (){
-        if(x>palo.x && x<palo.x+palo.alto) {
+        if(x>palo.x && x<palo.x+palo.alto && x>palo.y && x<palo.y+palo.alto ) {
             //rebortarizquierda y derecha
             if(x+dx<pelotas.radio  || x+dx>canvas.width-pelotas.radio){
                 dx=-dx;
@@ -96,15 +119,6 @@ function Dibujarpelota(){
     }
     function dibujar(){
         canvas.width = canvas.width;
-
-
-        //mover derecha o izquierda
-        if(derPresionado && palo.posx<canvas.width-palo.ancho){
-            palo.posx+=7;
-
-        }else if(izqPresionado && palo.posx>0){
-            palo.posX-=7;
-        }
 
         palo.dibujarpa();
         pelotas.dibujarpe();

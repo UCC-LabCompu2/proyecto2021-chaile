@@ -13,7 +13,7 @@
     <script type="text/javascript" src="MisFunciones.js"></script>
 
 </head>
-<body onload="Dibujarpelota()">
+<body>
 <div class="caja">
 <div>
     <a href="menu.html"> <img class="volver" src="imagenes/logovolver.png" alt="vinculo para volver al menu"> </a>
@@ -26,7 +26,7 @@
             <label for="MejorPuntaje"></label><input disabled type="number" name="points" min="0" placeholder="Mejor Puntaje" id="MejorPuntaje">
         </div>
     </div>
-    <canvas id="myCanvas" width="1000px" height="490px">
+    <canvas id="myCanvas" width="1000px" height="490px" onclick="Dibujarpelota(event)">
         El navegador no soporta canvas
     </canvas>
 </div>
