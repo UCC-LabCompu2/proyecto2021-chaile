@@ -1,9 +1,9 @@
 # JUEGO DE POOL 
 Esta pagina correspoonde al juego de billar
-##autor
-Lucia Chaile 
+## Autor
+* Lucia Chaile 
 
-##Tecnologias Usadas 
+## Tecnologias Usadas 
 * HTML5
 * CSS3
 * JavaScript
