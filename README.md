@@ -6,9 +6,9 @@ Lucia Chaile
 ##Tecnologias Usadas 
 * HTML5
 * CSS3
-*JavaScript
+* JavaScript
   
-link al sitio [Proyecto_juego_de_pool] (https://ucc-labcompu2.github.io/proyecto2021-chaile/)
+link al sitio: [Proyecto juego de pool] (https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html)
 Estructura de Proyecto Lab de Compu II - 2021
 
 
