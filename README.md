@@ -8,7 +8,7 @@ Lucia Chaile
 * CSS3
 * JavaScript
   
-link al sitio: [Proyecto juego de pool] (https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html)
+link al sitio: [Proyecto juego de pool](https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html)
 Estructura de Proyecto Lab de Compu II - 2021
 
 
