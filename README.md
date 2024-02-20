@@ -7,8 +7,12 @@ Esta pagina correspoonde al juego de billar
 * HTML5
 * CSS3
 * JavaScript
-  
-link al sitio: [Proyecto juego de pool](https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html)
-Estructura de Proyecto Lab de Compu II - 2021
+
+## Descripción
+Este proyecto fue desarrollado como parte del curso de Laboratorio de Computación II en el año 2021. Implementa un juego de billar utilizando las tecnologías web mencionadas anteriormente.
+
+## Acceso al Sitio
+Puedes acceder al sitio web del proyecto [aquí](https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html).
+
 
 
