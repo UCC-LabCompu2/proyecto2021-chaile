@@ -12,8 +12,7 @@ Esta pagina correspoonde al juego de billar
 Este proyecto fue desarrollado como parte del curso de Laboratorio de Computación II en el año 2021. Implementa un juego de billar utilizando las tecnologías web mencionadas anteriormente.
 
 ## Acceso al Sitio
-Puedes acceder al sitio web del proyecto [aquí](https://github.com/UCC-LabCompu2/proyecto2021-chaile.git/index.html)
-).
+Puedes acceder al sitio web del proyecto [aquí](https://ucc-labcompu2.github.io/proyecto2021-chaile/index.html).
 
 
 
