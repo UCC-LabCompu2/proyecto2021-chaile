@@ -2,33 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>POOL</title>
+    <title>JUEGO DE BILLAR</title>
     <meta content="Lucia Chaile" name="author">
-    <meta content="Juego de billar" name="Descripcion">
+    <meta content="Game de billar" name="Descripcion">
     <meta content="juego, entretenimiento, pool" name="palabras-principales">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="MiEstilo.css" type="text/css">
-    <link rel="shortcut icon" href="imagenes/fav.png">
-    <script type="text/javascript" src="MisFunciones.js"></script>
-
+    <link rel="stylesheet" href="MiEstilo.css" type="text/css"> <!--CSS -->
+    <link rel="shortcut icon" href="imagenes/fav.png"> <!--ICONO -->
 </head>
 <body>
+
 <header>
-    <div class="TituloPrincipal">
-        <h1 class="TituloPrincipal">POOL</h1>
-    </div>
+    <h1>GAME POOL</h1>
 </header>
 
-<nav>
-    <div id="boton">
-        <a href="Empezar.html">  Jugar </a>
-    </div>
-</nav>
+<div class="startScreen">
+    <button id="startButton">Comenzar juego</button>
+</div>
 
 <footer>
-    <h3><b>Creador: Lucia Chaile Carrera:Bioinformatica </b></h3>
+    <div class="footer-container">
+        <h3>Creador: Lucia Chaile Carrera: Bioinformatica</h3>
+    </div>
 </footer>
+
+<script>
+    // Agregar un event listener al botón
+    document.getElementById('startButton').addEventListener('click', function() {
+        // Redirigir a la página de juego.html
+        window.location.href = 'JUEGO.html';
+    });
+</script>
 
 </body>
 </html>
