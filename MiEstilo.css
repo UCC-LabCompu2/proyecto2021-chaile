@@ -26,6 +26,7 @@ header {
 }
 
 .startScreen button {
+    padding: 10px 20px;
     height: 60px;
     background-color: darkolivegreen;
     margin-left: 20px;
