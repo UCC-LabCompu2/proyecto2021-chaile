@@ -1,4 +1,10 @@
 const DELTA = 1 / 135; //porque quiero actualizar mucho (permite detectar la colision)
+
+/**
+ * Constructor de la clase GameWorld que representa el mundo del juego.
+ * Inicializa las bolas, el palo y los bordes de la mesa.
+ * @constructor
+ */
 function GameWorld() {
     //matriz
     this.balls = CONSTANTES.ballsParam.map(params => new Ball(...params));
@@ -17,13 +23,11 @@ function GameWorld() {
         BottomY: 768,
         LeftX: 57
     }
-
-
 }
 
-//metodos
-
-//manejo de colisiones
+/**
+ * Maneja las colisiones entre las bolas y con los bordes de la mesa.
+ */
 GameWorld.prototype.handleCollisions = function () {
 
     //recorro la matriz
@@ -41,7 +45,9 @@ GameWorld.prototype.handleCollisions = function () {
     }
 }
 
-
+/**
+ * Actualiza el estado del mundo del juego.
+ */
 GameWorld.prototype.update = function () {
 
     this.handleCollisions();
@@ -60,7 +66,6 @@ GameWorld.prototype.update = function () {
     if (!this.whiteBall.visible) {
         window.alert("¡Fallaste!"); // Mostrar una alerta si la bola blanca ha entrado
         this.restartGame(); // Reiniciar el juego
-
     }
 
     // Verificar si todas las bolas (excepto la blanca) han entrado
@@ -77,6 +82,9 @@ GameWorld.prototype.update = function () {
     }
 }
 
+/**
+ * Dibuja el mundo del juego en el lienzo.
+ */
 GameWorld.prototype.draw = function () {
 
     Canvas.drawImage(sprites.background, {x: 0, y: 0});
@@ -88,6 +96,9 @@ GameWorld.prototype.draw = function () {
     this.stick.draw();
 }
 
+/**
+ * Verifica si alguna bola se está moviendo en el mundo del juego.
+ */
 GameWorld.prototype.ballMoving = function () {
     let ballMoving = false;
 
@@ -101,7 +112,9 @@ GameWorld.prototype.ballMoving = function () {
     return ballMoving;
 }
 
-
+/**
+ * Reinicia el juego restableciendo posiciones, visibilidad y estado del palo y las bolas.
+ */
 GameWorld.prototype.restartGame = function () {
 
     // Restablecer posiciones y visibilidad de todas las bolas

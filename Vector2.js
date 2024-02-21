@@ -1,3 +1,10 @@
+/**
+ * Clase para representar un vector bidimensional en un espacio cartesiano.
+ * @constructor
+ * @param {number} [x=0] - La coordenada X del vector (opcional, por defecto es 0).
+ * @param {number} [y=0] - La coordenada Y del vector (opcional, por defecto es 0).
+ */
+
 function Vector2(x = 0, y = 0) {
     this.x = x;
     this.y = y;

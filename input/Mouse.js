@@ -1,3 +1,8 @@
+/**
+ * Maneja el evento de movimiento del mouse.
+ * @param {MouseEvent} evt - El evento de movimiento del mouse.
+ * @return {void}
+ */
 function handleMouseMove(evt) {
 
     let x = evt.pageX;
@@ -6,6 +11,11 @@ function handleMouseMove(evt) {
     Mouse.position = new Vector2(x,y);
 }
 
+/**
+ * Maneja el evento de presión del botón del mouse.
+ * @param {MouseEvent} evt - El evento de presión del botón del mouse.
+ * @return {void}
+ */
 function handleMouseDown(evt){
 
     handleMouseMove(evt);
@@ -25,6 +35,11 @@ function handleMouseDown(evt){
     }
 }
 
+/**
+ * Maneja el evento de liberación del botón del mouse.
+ * @param {MouseEvent} evt - El evento de liberación del botón del mouse.
+ * @return {void}
+ */
 function handleMouseUp(evt) {
     handleMouseMove(evt);
 
@@ -36,6 +51,11 @@ function handleMouseUp(evt) {
         Mouse.right.down = false;
 
 }
+
+/**
+ * Constructor de la clase MouseHandler que maneja los eventos del mouse.
+ * @constructor
+ */
 function MouseHandler() {
     this.left = new ButtonState();
     this.middle = new ButtonState();
@@ -48,6 +68,10 @@ function MouseHandler() {
     document.onmouseup = handleMouseUp;
 }
 
+/**
+ * Reinicia el estado de los botones del mouse.
+ * @method reset
+ */
 MouseHandler.prototype.reset = function (){
 
     this.left.pressed = false;
@@ -55,4 +79,8 @@ MouseHandler.prototype.reset = function (){
     this.right.pressed = false;
 }
 
+/**
+ * Instancia de MouseHandler que maneja los eventos del mouse.
+ * }
+ */
 let Mouse = new MouseHandler();

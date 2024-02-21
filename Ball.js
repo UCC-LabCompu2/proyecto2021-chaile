@@ -2,7 +2,12 @@ const BALL_ORIGIN = new Vector2(25,25);
 const BALL_DIAMETER = 38;
 const BALL_RADIUS = BALL_DIAMETER/2;
 
-
+/**
+ * Constructor de la clase Ball que representa una bola en el juego.
+ * @constructor
+ * @param {Vector2} position - La posición inicial de la bola.
+ * @param {string} color - El color de la bola.
+ */
 function Ball(position, color) {
     this.initialPosition = position.copy(); // Almacena la posición inicial
     this.position = position;
@@ -11,9 +16,12 @@ function Ball(position, color) {
     this.sprite = getBallSpriteByColor(color);
     this.color = color;
     this.visible = true;
-
 }
 
+/**
+ * Actualiza la posición de la bola en función del tiempo delta.
+ * @method update
+ */
 Ball.prototype.update = function (delta){
 
     if(!this.visible){
@@ -30,6 +38,10 @@ Ball.prototype.update = function (delta){
     }
 }
 
+/**
+ * Dibuja la bola en el lienzo.
+ * @method draw
+ */
 Ball.prototype.draw = function (){
     if(!this.visible){
         return;
@@ -38,6 +50,10 @@ Ball.prototype.draw = function (){
 
 }
 
+/**
+ * Dispara la bola con una potencia y rotación dadas.
+ * @method shoot
+ */
 Ball.prototype.shoot = function (power, rotation){
 
     this.velocity = new Vector2(power * Math.cos(rotation),power * Math.sin(rotation));
@@ -46,6 +62,10 @@ Ball.prototype.shoot = function (power, rotation){
 
 //colision
 
+/**
+ * Maneja la colisión de la bola con otra bola.
+ * @method collideWithBall
+ */
 Ball.prototype.collideWithBall = function (ball){
 
     if(!this.visible || !ball.visible){
@@ -101,6 +121,10 @@ Ball.prototype.collideWithBall = function (ball){
 
 }
 
+/**
+ * Maneja si la bola está en un bolsillo.
+ * @method handleBallInPocket
+ */
 Ball.prototype.handleBallInPocket = function (){
 
     if(!this.visible){
@@ -120,6 +144,10 @@ Ball.prototype.handleBallInPocket = function (){
     this.moving = false;
 }
 
+/**
+ * Maneja la colisión de la bola con los bordes de la mesa.
+ * @method collideWithTable
+ */
 Ball.prototype.collideWithTable = function (table){
     if (!this.moving || !this.visible){
         return;
@@ -159,7 +187,5 @@ Ball.prototype.collideWithTable = function (table){
     if(collided){
         this.velocity = this.velocity.mult(0.95);
     }
-
-
 
 }

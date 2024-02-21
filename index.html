@@ -17,6 +17,7 @@
 
 <div class="startScreen">
     <button id="startButton">Comenzar juego</button>
+    <button id="decripButton">Info</button>
 </div>
 
 <footer>
@@ -31,6 +32,13 @@
         // Redirigir a la página de juego.html
         window.location.href = 'JUEGO.html';
     });
+
+    // Agregar un event listener al botón "Info"
+    document.getElementById('decripButton').addEventListener('click', function() {
+        // Redirigir a la página de información.html (o a la que desees)
+        window.location.href = 'Info.html';
+    });
+
 </script>
 
 </body>
