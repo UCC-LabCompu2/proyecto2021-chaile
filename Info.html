@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JUEGO DE BILLAR</title>
+    <meta content="Lucia Chaile" name="author">
+    <meta content="Game de billar" name="Descripcion">
+    <meta content="juego, entretenimiento, pool" name="palabras-principales">
+    <link rel="stylesheet" href="MiEstilo.css" type="text/css"> <!--CSS -->
+    <link rel="shortcut icon" href="imagenes/fav.png"> <!--ICONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+    <div id="backButton">
+        <img src="imagenes/back.png" alt="Botón de regreso">
+    </div>
+    <h1> ¡BIENVENIDO! AQUI TIENES INFORMACION SOBRE LA PAGINA</h1>
+    <p>
+        Esto es un juego de billar.
+        Es buen momento para que puedas ver que tan buena punteria tienes.
+    </p>
+
+    <h2> Lo unico que debes hacer es: </h2>
+    <ol>
+        <li>Apunta con el mouse</li>
+        <li>Manten presionado el boton izquierdo del mouse. Ten en cuenta la velocidad con la quieres tirar</li>
+        <li>No dejes entrar a la pelota blanca</li>
+        <li>Ganas cuando todas la bolas entran</li>
+    </ol>
+
+    <p>
+        Ten mucha paciencia.
+    </p>
+    <script>
+        // Event listener para el botón de regreso
+        document.getElementById('backButton').addEventListener('click', function() {
+            // Redirige a la página principal
+            window.location.href = 'index.html';
+        });
+    </script>
+</section>
+</body>
+</html>
